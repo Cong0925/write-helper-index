@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作助手 WriteHelper — AI 写作助手 & 桌面宠物</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Space+Mono:wght@400;700&family=Press+Start+2P&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Pet Background Decorations -->
+<div class="pet-bg" aria-hidden="true">
+  <img src="img/cinder_avatar.png" class="pet-bg-item" style="top:50.7%;left:82.3%;width:78px;opacity:0.07;transform:rotate(10deg)">
+  <img src="img/chompers_avatar.png" class="pet-bg-item" style="top:39.4%;left:59.6%;width:57px;opacity:0.06;transform:rotate(1deg)">
+  <img src="img/duo_avatar.png" class="pet-bg-item" style="top:32.9%;left:58.1%;width:82px;opacity:0.06;transform:rotate(-21deg)">
+  <img src="img/doudou_avatar.png" class="pet-bg-item" style="top:46.4%;left:74.3%;width:92px;opacity:0.08;transform:rotate(-23deg)">
+  <img src="img/amiya_avatar.png" class="pet-bg-item" style="top:64.6%;left:46.0%;width:89px;opacity:0.09;transform:rotate(-14deg)">
+  <img src="img/mimi_avatar.png" class="pet-bg-item" style="top:89.3%;left:74.5%;width:50px;opacity:0.07;transform:rotate(-13deg)">
+  <img src="img/chimchar_avatar.png" class="pet-bg-item" style="top:14.8%;left:41.7%;width:58px;opacity:0.09;transform:rotate(13deg)">
+  <img src="img/itachi_avatar.png" class="pet-bg-item" style="top:85.2%;left:84.8%;width:74px;opacity:0.05;transform:rotate(-8deg)">
+  <img src="img/piyomon_avatar.png" class="pet-bg-item" style="top:31.5%;left:31.9%;width:87px;opacity:0.08;transform:rotate(7deg)">
+  <img src="img/kimlet-hover-clap_avatar.png" class="pet-bg-item" style="top:44.2%;left:25.1%;width:80px;opacity:0.09;transform:rotate(-10deg)">
+  <img src="img/miaodex_avatar.png" class="pet-bg-item" style="top:9.3%;left:39.4%;width:56px;opacity:0.09;transform:rotate(16deg)">
+  <img src="img/firefly_avatar.png" class="pet-bg-item" style="top:58.4%;left:53.5%;width:77px;opacity:0.08;transform:rotate(4deg)">
+  <img src="img/doro_avatar.png" class="pet-bg-item" style="top:57.9%;left:62.0%;width:71px;opacity:0.09;transform:rotate(-4deg)">
+  <img src="img/liudao-ban_avatar.png" class="pet-bg-item" style="top:40.8%;left:42.7%;width:94px;opacity:0.10;transform:rotate(-14deg)">
+  <img src="img/xiyou-tangseng_avatar.png" class="pet-bg-item" style="top:52.9%;left:77.7%;width:85px;opacity:0.08;transform:rotate(3deg)">
+  <img src="img/gabumon_avatar.png" class="pet-bg-item" style="top:26.4%;left:65.1%;width:83px;opacity:0.06;transform:rotate(-3deg)">
+  <img src="img/goku-blue_avatar.png" class="pet-bg-item" style="top:52.2%;left:57.1%;width:44px;opacity:0.05;transform:rotate(-24deg)">
+  <img src="img/gomamon_avatar.png" class="pet-bg-item" style="top:93.5%;left:22.0%;width:42px;opacity:0.11;transform:rotate(16deg)">
+  <img src="img/garra_avatar.png" class="pet-bg-item" style="top:82.9%;left:80.9%;width:51px;opacity:0.11;transform:rotate(-6deg)">
+  <img src="img/veemon_avatar.png" class="pet-bg-item" style="top:14.1%;left:32.3%;width:65px;opacity:0.09;transform:rotate(20deg)">
+  <img src="img/pink-star_avatar.png" class="pet-bg-item" style="top:82.7%;left:90.8%;width:56px;opacity:0.04;transform:rotate(-1deg)">
+  <img src="img/voidcat-default_avatar.png" class="pet-bg-item" style="top:53.0%;left:41.8%;width:69px;opacity:0.10;transform:rotate(-9deg)">
+  <img src="img/tentomon_avatar.png" class="pet-bg-item" style="top:18.6%;left:55.1%;width:79px;opacity:0.05;transform:rotate(7deg)">
+  <img src="img/naruto_avatar.png" class="pet-bg-item" style="top:72.5%;left:32.6%;width:83px;opacity:0.07;transform:rotate(22deg)">
+  <img src="img/yamcha_avatar.png" class="pet-bg-item" style="top:73.4%;left:17.4%;width:74px;opacity:0.11;transform:rotate(9deg)">
+  <img src="img/jinx_avatar.png" class="pet-bg-item" style="top:75.0%;left:52.3%;width:42px;opacity:0.04;transform:rotate(-19deg)">
+  <img src="img/tuxmimi_avatar.png" class="pet-bg-item" style="top:59.0%;left:15.8%;width:90px;opacity:0.10;transform:rotate(18deg)">
+  <img src="img/bananacat_avatar.png" class="pet-bg-item" style="top:8.7%;left:77.8%;width:57px;opacity:0.07;transform:rotate(14deg)">
+  <img src="img/gon_avatar.png" class="pet-bg-item" style="top:21.9%;left:14.5%;width:51px;opacity:0.06;transform:rotate(-14deg)">
+  <img src="img/maid-theresa_avatar.png" class="pet-bg-item" style="top:81.5%;left:23.6%;width:74px;opacity:0.06;transform:rotate(11deg)">
+  <img src="img/pearl-idol_avatar.png" class="pet-bg-item" style="top:77.5%;left:56.1%;width:41px;opacity:0.06;transform:rotate(-20deg)">
+  <img src="img/skirk_avatar.png" class="pet-bg-item" style="top:12.3%;left:85.2%;width:78px;opacity:0.05;transform:rotate(-7deg)">
+  <img src="img/danny_avatar.png" class="pet-bg-item" style="top:43.6%;left:18.4%;width:90px;opacity:0.04;transform:rotate(-4deg)">
+  <img src="img/sephiroth_avatar.png" class="pet-bg-item" style="top:24.3%;left:42.1%;width:83px;opacity:0.09;transform:rotate(21deg)">
+  <img src="img/slay-belle-katarina_avatar.png" class="pet-bg-item" style="top:82.9%;left:67.2%;width:88px;opacity:0.10;transform:rotate(-8deg)">
+  <img src="img/steve_avatar.png" class="pet-bg-item" style="top:35.9%;left:65.6%;width:84px;opacity:0.11;transform:rotate(4deg)">
+  <img src="img/killua_avatar.png" class="pet-bg-item" style="top:22.0%;left:84.9%;width:75px;opacity:0.05;transform:rotate(-23deg)">
+  <img src="img/goku_avatar.png" class="pet-bg-item" style="top:41.7%;left:96.1%;width:45px;opacity:0.06;transform:rotate(-20deg)">
+  <img src="img/shiny-daermaodou_avatar.png" class="pet-bg-item" style="top:62.5%;left:36.8%;width:68px;opacity:0.06;transform:rotate(6deg)">
+  <img src="img/boba_avatar.png" class="pet-bg-item" style="top:36.7%;left:72.3%;width:82px;opacity:0.12;transform:rotate(22deg)">
+  <img src="img/stlulu_avatar.png" class="pet-bg-item" style="top:72.3%;left:25.7%;width:79px;opacity:0.11;transform:rotate(-24deg)">
+  <img src="img/aerith_avatar.png" class="pet-bg-item" style="top:60.1%;left:58.1%;width:79px;opacity:0.06;transform:rotate(-4deg)">
+  <img src="img/kabi_avatar.png" class="pet-bg-item" style="top:35.3%;left:88.2%;width:55px;opacity:0.05;transform:rotate(2deg)">
+  <img src="img/gardevoir_avatar.png" class="pet-bg-item" style="top:43.9%;left:92.0%;width:42px;opacity:0.04;transform:rotate(-9deg)">
+  <img src="img/xiaoxin_avatar.png" class="pet-bg-item" style="top:39.0%;left:56.4%;width:69px;opacity:0.10;transform:rotate(17deg)">
+  <img src="img/daltanyang_avatar.png" class="pet-bg-item" style="top:57.2%;left:34.9%;width:47px;opacity:0.07;transform:rotate(11deg)">
+  <img src="img/capvolt_avatar.png" class="pet-bg-item" style="top:31.1%;left:4.2%;width:52px;opacity:0.11;transform:rotate(13deg)">
+  <img src="img/patamon_avatar.png" class="pet-bg-item" style="top:29.9%;left:14.0%;width:74px;opacity:0.06;transform:rotate(4deg)">
+  <img src="img/xiao-lingjie_avatar.png" class="pet-bg-item" style="top:36.6%;left:49.2%;width:81px;opacity:0.09;transform:rotate(-21deg)">
+  <img src="img/stewie_avatar.png" class="pet-bg-item" style="top:15.8%;left:50.7%;width:64px;opacity:0.09;transform:rotate(-5deg)">
+  <img src="img/kanaria_avatar.png" class="pet-bg-item" style="top:81.2%;left:52.9%;width:62px;opacity:0.10;transform:rotate(-9deg)">
+  <img src="img/shadebird_avatar.png" class="pet-bg-item" style="top:88.0%;left:91.6%;width:45px;opacity:0.09;transform:rotate(-3deg)">
+  <img src="img/agumon_avatar.png" class="pet-bg-item" style="top:79.7%;left:63.8%;width:76px;opacity:0.08;transform:rotate(-22deg)">
+  <img src="img/fufu_avatar.png" class="pet-bg-item" style="top:62.7%;left:77.2%;width:62px;opacity:0.09;transform:rotate(2deg)">
+  <img src="img/moyu-cat_avatar.png" class="pet-bg-item" style="top:87.4%;left:31.0%;width:74px;opacity:0.05;transform:rotate(-22deg)">
+  <img src="img/aka-shiba_avatar.png" class="pet-bg-item" style="top:60.6%;left:40.4%;width:77px;opacity:0.06;transform:rotate(8deg)">
+  <img src="img/sealos_avatar.png" class="pet-bg-item" style="top:18.9%;left:32.3%;width:42px;opacity:0.07;transform:rotate(-12deg)">
+  <img src="img/77_avatar.png" class="pet-bg-item" style="top:43.3%;left:36.0%;width:90px;opacity:0.04;transform:rotate(17deg)">
+  <img src="img/kyojuro-rengoku_avatar.png" class="pet-bg-item" style="top:52.5%;left:51.7%;width:94px;opacity:0.05;transform:rotate(-3deg)">
+  <img src="img/kazuha_avatar.png" class="pet-bg-item" style="top:27.3%;left:10.0%;width:84px;opacity:0.11;transform:rotate(-13deg)">
+  <img src="img/didi_avatar.png" class="pet-bg-item" style="top:43.0%;left:82.7%;width:85px;opacity:0.12;transform:rotate(22deg)">
+  <img src="img/otto_avatar.png" class="pet-bg-item" style="top:91.2%;left:11.8%;width:54px;opacity:0.07;transform:rotate(-2deg)">
+  <img src="img/whaledou_avatar.png" class="pet-bg-item" style="top:23.3%;left:50.4%;width:83px;opacity:0.09;transform:rotate(-5deg)">
+  <img src="img/samo_avatar.png" class="pet-bg-item" style="top:35.3%;left:21.0%;width:74px;opacity:0.08;transform:rotate(13deg)">
+  <img src="img/milo_avatar.png" class="pet-bg-item" style="top:63.0%;left:81.2%;width:53px;opacity:0.05;transform:rotate(7deg)">
+  <img src="img/ayaka_avatar.png" class="pet-bg-item" style="top:40.0%;left:69.0%;width:57px;opacity:0.10;transform:rotate(-22deg)">
+  <img src="img/daodun-dog_avatar.png" class="pet-bg-item" style="top:19.7%;left:91.9%;width:74px;opacity:0.08;transform:rotate(5deg)">
+  <img src="img/sukuna_avatar.png" class="pet-bg-item" style="top:56.3%;left:11.0%;width:94px;opacity:0.05;transform:rotate(0deg)">
+  <img src="img/miaomiao-codex_avatar.png" class="pet-bg-item" style="top:72.8%;left:67.5%;width:93px;opacity:0.06;transform:rotate(-9deg)">
+  <img src="img/demon-wolf_avatar.png" class="pet-bg-item" style="top:26.7%;left:58.0%;width:57px;opacity:0.07;transform:rotate(-23deg)">
+  <img src="img/doraemon_avatar.png" class="pet-bg-item" style="top:16.0%;left:95.5%;width:48px;opacity:0.12;transform:rotate(-5deg)">
+  <img src="img/dimo_avatar.png" class="pet-bg-item" style="top:18.5%;left:79.0%;width:85px;opacity:0.09;transform:rotate(10deg)">
+  <img src="img/palmon_avatar.png" class="pet-bg-item" style="top:9.1%;left:51.3%;width:80px;opacity:0.05;transform:rotate(-4deg)">
+  <img src="img/painling_avatar.png" class="pet-bg-item" style="top:10.4%;left:6.9%;width:80px;opacity:0.06;transform:rotate(6deg)">
+  <img src="img/linnea_avatar.png" class="pet-bg-item" style="top:92.1%;left:96.2%;width:42px;opacity:0.06;transform:rotate(1deg)">
+  <img src="img/tiko_avatar.png" class="pet-bg-item" style="top:10.9%;left:19.6%;width:72px;opacity:0.07;transform:rotate(-10deg)">
+  <img src="img/luffy_avatar.png" class="pet-bg-item" style="top:20.6%;left:24.5%;width:83px;opacity:0.11;transform:rotate(18deg)">
+  <img src="img/hu-tao-pet_avatar.png" class="pet-bg-item" style="top:35.3%;left:82.7%;width:63px;opacity:0.05;transform:rotate(24deg)">
+  <img src="img/sasuke-uchiha_avatar.png" class="pet-bg-item" style="top:25.7%;left:17.8%;width:76px;opacity:0.11;transform:rotate(17deg)">
+  <img src="img/wukong_avatar.png" class="pet-bg-item" style="top:60.5%;left:30.3%;width:86px;opacity:0.06;transform:rotate(-10deg)">
+  <img src="img/kaka_avatar.png" class="pet-bg-item" style="top:74.6%;left:59.9%;width:60px;opacity:0.11;transform:rotate(-22deg)">
+  <img src="img/keqing_avatar.png" class="pet-bg-item" style="top:7.3%;left:86.4%;width:59px;opacity:0.12;transform:rotate(0deg)">
+  <img src="img/byte-bunny_avatar.png" class="pet-bg-item" style="top:80.1%;left:84.8%;width:58px;opacity:0.07;transform:rotate(3deg)">
+  <img src="img/kal-tsit_avatar.png" class="pet-bg-item" style="top:36.4%;left:36.8%;width:60px;opacity:0.06;transform:rotate(11deg)">
+  <img src="img/luluka_avatar.png" class="pet-bg-item" style="top:79.1%;left:71.4%;width:64px;opacity:0.06;transform:rotate(7deg)">
+  <img src="img/retriever_avatar.png" class="pet-bg-item" style="top:57.0%;left:25.3%;width:67px;opacity:0.07;transform:rotate(9deg)">
+  <img src="img/bee-teemo_avatar.png" class="pet-bg-item" style="top:49.3%;left:15.0%;width:89px;opacity:0.06;transform:rotate(-11deg)">
+  <img src="img/gojo_avatar.png" class="pet-bg-item" style="top:69.5%;left:21.2%;width:80px;opacity:0.05;transform:rotate(3deg)">
+  <img src="img/batmeme_avatar.png" class="pet-bg-item" style="top:80.7%;left:58.1%;width:80px;opacity:0.09;transform:rotate(5deg)">
+  <img src="img/nezukocoder_avatar.png" class="pet-bg-item" style="top:76.7%;left:94.9%;width:58px;opacity:0.10;transform:rotate(-20deg)">
+  <img src="img/zoro_avatar.png" class="pet-bg-item" style="top:84.4%;left:33.6%;width:63px;opacity:0.05;transform:rotate(14deg)">
+  <img src="img/futuduozaemon_avatar.png" class="pet-bg-item" style="top:67.8%;left:8.0%;width:49px;opacity:0.06;transform:rotate(8deg)">
+  <img src="img/trumpet_avatar.png" class="pet-bg-item" style="top:57.6%;left:70.3%;width:83px;opacity:0.06;transform:rotate(2deg)">
+  <img src="img/peter_avatar.png" class="pet-bg-item" style="top:89.0%;left:80.5%;width:50px;opacity:0.04;transform:rotate(-23deg)">
+  <img src="img/totoro_avatar.png" class="pet-bg-item" style="top:25.3%;left:90.6%;width:68px;opacity:0.05;transform:rotate(2deg)">
+  <img src="img/endminguga_avatar.png" class="pet-bg-item" style="top:73.7%;left:36.6%;width:88px;opacity:0.08;transform:rotate(-4deg)">
+  <img src="img/kyle-kun_avatar.png" class="pet-bg-item" style="top:13.4%;left:65.2%;width:71px;opacity:0.10;transform:rotate(24deg)">
+  <img src="img/vivi_avatar.png" class="pet-bg-item" style="top:82.4%;left:96.5%;width:44px;opacity:0.09;transform:rotate(-6deg)">
+  <img src="img/obito_avatar.png" class="pet-bg-item" style="top:62.8%;left:88.9%;width:46px;opacity:0.09;transform:rotate(-25deg)">
+  <img src="img/Kun-like_avatar.png" class="pet-bg-item" style="top:48.1%;left:59.4%;width:92px;opacity:0.12;transform:rotate(13deg)">
+  <img src="img/silver-wolf-lv999_avatar.png" class="pet-bg-item" style="top:39.9%;left:53.0%;width:46px;opacity:0.10;transform:rotate(18deg)">
+  <img src="img/dobby_avatar.png" class="pet-bg-item" style="top:30.2%;left:27.6%;width:63px;opacity:0.11;transform:rotate(23deg)">
+  <img src="img/snow-plum-lillia_avatar.png" class="pet-bg-item" style="top:11.7%;left:73.8%;width:51px;opacity:0.11;transform:rotate(15deg)">
+  <img src="img/purrcat_avatar.png" class="pet-bg-item" style="top:13.4%;left:57.3%;width:76px;opacity:0.04;transform:rotate(-11deg)">
+  <img src="img/cat-in-the-box-shaco_avatar.png" class="pet-bg-item" style="top:65.0%;left:60.3%;width:88px;opacity:0.08;transform:rotate(-12deg)">
+  <img src="img/nai-long_avatar.png" class="pet-bg-item" style="top:66.6%;left:74.4%;width:86px;opacity:0.08;transform:rotate(19deg)">
+  <img src="img/goose-default_avatar.png" class="pet-bg-item" style="top:48.4%;left:28.2%;width:86px;opacity:0.10;transform:rotate(-4deg)">
+  <img src="img/Angemon_avatar.png" class="pet-bg-item" style="top:17.6%;left:6.7%;width:84px;opacity:0.10;transform:rotate(-4deg)">
+  <img src="img/rusthound-default_avatar.png" class="pet-bg-item" style="top:76.6%;left:80.0%;width:67px;opacity:0.05;transform:rotate(-17deg)">
+  <img src="img/golden-retriever_avatar.png" class="pet-bg-item" style="top:29.9%;left:50.7%;width:55px;opacity:0.10;transform:rotate(4deg)">
+  <img src="img/vivimi-strict_avatar.png" class="pet-bg-item" style="top:89.0%;left:15.4%;width:93px;opacity:0.08;transform:rotate(22deg)">
+  <img src="img/nailong_avatar.png" class="pet-bg-item" style="top:69.2%;left:39.1%;width:43px;opacity:0.11;transform:rotate(16deg)">
+  <img src="img/madara_avatar.png" class="pet-bg-item" style="top:43.5%;left:47.6%;width:81px;opacity:0.05;transform:rotate(-11deg)">
+  <img src="img/Giratina_avatar.png" class="pet-bg-item" style="top:29.0%;left:46.0%;width:68px;opacity:0.10;transform:rotate(18deg)">
+</div>
+
+<!-- Nav -->
+<nav>
+  <div class="nav-logo">写作助手<span>WriteHelper</span></div>
+  <div class="nav-links">
+    <a href="#pet">桌面宠物 Desktop Pet</a>
+    <a href="#writing">写作 Writing</a>
+    <a href="#themes">主题 Themes</a>
+    <a class="nav-cta" href="https://pan.quark.cn/s/18f2e1277792" target="_blank">下载 Download</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    v3.0 — 全新桌面宠物上线 / New Desktop Pet Available
+  </div>
+  <h1>写作助手</h1>
+  <p class="hero-sub">WRITE HELPER</p>
+  <p class="hero-desc">
+    一款为创作者打造的桌面写作助手，集成 AI 智能写作、多类型创作模板，还有可爱的桌面宠物陪伴你的每一次创作。
+    <br><br>
+    A desktop writing assistant for creators, featuring AI-powered writing, multi-format templates, and an adorable pet companion.
+  </p>
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://pan.quark.cn/s/18f2e1277792" target="_blank">
+      立即下载 <span class="arrow">→</span>
+    </a>
+    <a class="btn-secondary" href="#pet">了解更多 Learn More</a>
+  </div>
+  <p class="hero-version">Windows 10/11 · 64-bit · 免费 / Free</p>
+
+  <!-- Floating Pet -->
+  <div class="floating-pet">
+    <div class="pet-body">
+      <div class="pet-ear-l"></div>
+      <div class="pet-ear-r"></div>
+      <div class="pet-eye pet-eye-l"></div>
+      <div class="pet-eye pet-eye-r"></div>
+      <div class="pet-nose"></div>
+      <div class="pet-mouth"></div>
+      <div class="pet-cheek pet-cheek-l"></div>
+      <div class="pet-cheek pet-cheek-r"></div>
+      <div class="pet-tail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Pet Section -->
+<section class="pet-section" id="pet">
+  <div class="reveal">
+    <p class="section-label">Desktop Pet</p>
+    <h2 class="section-title">你的写作伙伴</h2>
+    <p class="section-desc">
+      不只是工具，更是陪伴。领养你的专属桌面宠物，在创作路上不再孤单。
+      <br>Not just a tool, but a companion. Adopt your own desktop pet and never write alone.
+    </p>
+  </div>
+  <div class="pet-showcase reveal">
+    <div class="pet-card">
+      <span class="pet-card-icon">🐱</span>
+      <h3>领养宠物</h3>
+      <p class="en">Adopt</p>
+      <p>选择你喜欢的宠物形象，它会出现在你的桌面上，陪伴你写作的每一刻。</p>
+    </div>
+    <div class="pet-card">
+      <span class="pet-card-icon">💕</span>
+      <h3>互动陪伴</h3>
+      <p class="en">Interact</p>
+      <p>宠物会根据你的写作状态做出反应，打字时它会安静陪伴，停下时它会可爱互动。</p>
+    </div>
+    <div class="pet-card">
+      <span class="pet-card-icon">✨</span>
+      <h3>成长系统</h3>
+      <p class="en">Grow</p>
+      <p>随着你写作越多，宠物会解锁新的动作和表情，见证你的创作旅程。</p>
+    </div>
+  </div>
+</section>
+
+<!-- Writing Section -->
+<section class="writing-section" id="writing">
+  <div class="reveal">
+    <p class="section-label">Writing</p>
+    <h2 class="section-title">专业写作能力</h2>
+    <p class="section-desc">
+      支持小说、文章、脚本、社交帖子等多种创作类型，内置 AI 辅助，让创作更高效。
+      <br>Supports novels, articles, scripts, social posts and more. Built-in AI assistance for efficient creation.
+    </p>
+  </div>
+  <div class="writing-features reveal">
+    <div class="wf-item">
+      <span class="wf-icon">📝</span>
+      <h4>多类型创作</h4>
+      <p class="en">Multi-format</p>
+      <p>小说、公众号文章、头条文章、知乎文章、小红书笔记、短视频脚本、B站专栏</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">🤖</span>
+      <h4>AI 智能助手</h4>
+      <p class="en">AI Assistant</p>
+      <p>接入 DeepSeek、OpenAI 等主流 AI 服务商，支持续写、扩写、润色、校对</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">🔍</span>
+      <h4>智能校对</h4>
+      <p class="en">Proofreading</p>
+      <p>内置敏感词检测、自定义纠错规则，一键排查文本问题</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">📊</span>
+      <h4>大纲管理</h4>
+      <p class="en">Outline</p>
+      <p>可视化大纲编辑，章节结构一目了然，支持拖拽排序</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">👤</span>
+      <h4>人设系统</h4>
+      <p class="en">Character</p>
+      <p>为角色建立完整档案，包括性格、背景、关系网，AI 创作更贴合</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">🔥</span>
+      <h4>热点趋势</h4>
+      <p class="en">Trending</p>
+      <p>实时追踪微博、头条、夸克等多平台热搜，为创作提供灵感</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">🎨</span>
+      <h4>丰富主题</h4>
+      <p class="en">Themes</p>
+      <p>薄雾灰、护眼绿、羊皮纸、静谧蓝等 11 款精心设计的主题皮肤</p>
+    </div>
+    <div class="wf-item">
+      <span class="wf-icon">⌨️</span>
+      <h4>快捷键系统</h4>
+      <p class="en">Shortcuts</p>
+      <p>全屏写作、一键排版、章首定位等快捷键，提升写作效率</p>
+    </div>
+  </div>
+</section>
+
+<!-- Themes Section -->
+<section class="themes-section" id="themes">
+  <div class="reveal">
+    <p class="section-label">Themes</p>
+    <h2 class="section-title">精选主题皮肤</h2>
+    <p class="section-desc">
+      每一款主题都经过精心调色，为你营造最舒适的写作氛围。
+      <br>Each theme is meticulously crafted to create the most comfortable writing atmosphere.
+    </p>
+  </div>
+  <div class="theme-grid reveal">
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #f5f5f7;"></div>
+      <span>薄雾灰<span class="en">Mist</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #d4e9d4;"></div>
+      <span>护眼绿<span class="en">Green</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #e8dcc8;"></div>
+      <span>羊皮纸<span class="en">Parchment</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #dce4ee;"></div>
+      <span>静谧蓝<span class="en">Blue</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #f1e0e6;"></div>
+      <span>浪漫粉<span class="en">Pink</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #fafafa;"></div>
+      <span>极简白<span class="en">White</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #1c1814;"></div>
+      <span>暗夜暖<span class="en">Warm Dark</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #1e293b;"></div>
+      <span>深空青<span class="en">Cyan</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #333842;"></div>
+      <span>石墨灰<span class="en">Graphite</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #282420;"></div>
+      <span>暗金棕<span class="en">Amber</span></span>
+    </div>
+    <div class="theme-chip">
+      <div class="theme-dot" style="background: #282230;"></div>
+      <span>深紫夜<span class="en">Purple</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-section">
+  <div class="reveal">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">功能亮点</h2>
+  </div>
+  <div class="stats-row reveal">
+    <div class="stat-item">
+      <div class="stat-num">7</div>
+      <div class="stat-label">创作类型 / Writing Types</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">11</div>
+      <div class="stat-label">主题皮肤 / Theme Skins</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">114</div>
+      <div class="stat-label">内置宠物 / Built-in Pets</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="stat-users">--</div>
+      <div class="stat-label">注册用户 / Users</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <p class="section-label">Get Started</p>
+    <h2 class="section-title">开始你的创作之旅</h2>
+    <p class="section-desc">
+      免费下载，开箱即用。支持 Windows 10/11。
+      <br>Free download, ready to use. Supports Windows 10/11.
+    </p>
+    <div class="cta-actions">
+      <a class="btn-download" href="https://pan.quark.cn/s/18f2e1277792" target="_blank">
+        夸克网盘下载 Quark Download <span class="arrow">↗</span>
+      </a>
+    </div>
+    <p class="cta-note">Windows 10/11 · 64-bit · v3.0.1 · 免费 / Free</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="left">© 2026 写作助手 WriteHelper · QQ 群 662396307</div>
+  <div class="right">
+    <a href="https://pan.quark.cn/s/18f2e1277792" target="_blank">下载 Download</a>
+    <a href="#">QQ 群 Group</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
